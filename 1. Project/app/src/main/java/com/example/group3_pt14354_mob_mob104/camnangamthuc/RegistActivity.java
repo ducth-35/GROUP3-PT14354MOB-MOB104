@@ -1,4 +1,4 @@
-package com.example.group3_pt14354_mob_mob104;
+package com.example.group3_pt14354_mob_mob104.camnangamthuc;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.group3_pt14354_mob_mob104.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

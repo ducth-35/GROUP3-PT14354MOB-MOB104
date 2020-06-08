@@ -11,10 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegistActivity">
+        <activity android:name=".camnangamthuc.RegistActivity">
 
         </activity>
-        <activity android:name=".Manhinhchinh">
+        <activity android:name=".camnangamthuc.Manhinhchinh">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,10 +22,10 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".camnangamthuc.LoginActivity">
 
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".camnangamthuc.MainActivity" />
     </application>
 
 </manifest>
