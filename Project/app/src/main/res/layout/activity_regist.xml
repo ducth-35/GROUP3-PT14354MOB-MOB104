@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistActivity">
+    <TextView
+        android:id="@+id/tvregist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47sp"
+        android:text="MÓN NGON VIỆT"
+        android:textColor="#FF0000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edRegisterUserName"
+        android:layout_width="357sp"
+        android:layout_height="56sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:background="@drawable/custom_edittext"
+        android:drawablePadding="12sp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingStart="10sp"
+        android:paddingLeft="20sp"
+        android:paddingEnd="10sp"
+        android:paddingRight="20sp"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvregist2" />
+
+    <EditText
+        android:id="@+id/edRegisterPassword"
+        android:layout_width="357sp"
+        android:layout_height="56sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvregist3" />
+
+
+    <EditText
+        android:id="@+id/edRegisterPassword2"
+        android:layout_width="357sp"
+        android:layout_height="56sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvregist4" />
+
+    <TextView
+        android:id="@+id/tvregist2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Tài khoản"
+        android:textColor="#050505"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvregist" />
+
+    <TextView
+        android:id="@+id/tvregist3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Mật khẩu"
+        android:textColor="#050505"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edRegisterUserName" />
+
+    <TextView
+        android:id="@+id/tvregist4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Nhắc lại mật khẩu"
+        android:textColor="#050505"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edRegisterPassword" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="357sp"
+        android:layout_height="57sp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/custom_button"
+        android:onClick="Register"
+        android:text="Đăng kí"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edRegisterPassword2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edRegisterPassword2"
+        app:layout_constraintTop_toBottomOf="@+id/edRegisterPassword2"
+        tools:ignore="OnClick" />
+
+</android.support.constraint.ConstraintLayout>

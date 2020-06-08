@@ -1,0 +1,74 @@
+package com.example.group3_pt14354_mob_mob104;
+
+import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
+public class RegistActivity extends AppCompatActivity {
+    private EditText ed_username,ed_password,ed_repassword;
+    private TextView tv_tieude,tv_username,tv_password,tv_repassword;
+    private Button btn_register;
+    private FirebaseAuth firebaseAuth;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_regist);
+        ed_username = findViewById(R.id.edRegisterUserName);
+        ed_password = findViewById(R.id.edRegisterPassword);
+        ed_repassword = findViewById(R.id.edRegisterPassword2);
+        tv_tieude = findViewById(R.id.tvregist);
+        tv_username = findViewById(R.id.tvregist2);
+        tv_password = findViewById(R.id.tvregist3);
+        tv_repassword = findViewById(R.id.tvregist4);
+        btn_register = findViewById(R.id.btnRegister);
+
+
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        if (firebaseAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
+        }
+        btn_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username = ed_username.getText().toString().trim();
+                String password = ed_password.getText().toString().trim();
+                if (TextUtils.isEmpty(username)){
+                    ed_username.setError("ko de trong");
+                    return;
+                }
+                if (TextUtils.isEmpty(password)){
+                    ed_password.setError("ko de trong");
+                    return;
+                }
+                firebaseAuth.createUserWithEmailAndPassword(username,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(RegistActivity.this, "user Created",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                        }
+                        else {
+                            Toast.makeText(RegistActivity.this, "Error" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                });
+            }
+        });
+    }
+}
