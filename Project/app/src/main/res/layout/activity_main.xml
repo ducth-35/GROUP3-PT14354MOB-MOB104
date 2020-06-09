@@ -33,7 +33,7 @@
         android:layout_gravity="bottom"
         app:itemTextColor="#ffff"
         app:itemIconTint="#ffff"
-        android:background="@color/colorPrimary"
+        android:background="#663399"
         android:layout_alignParentBottom="true"
         app:menu="@menu/navigation_botton"/>
 </RelativeLayout>
