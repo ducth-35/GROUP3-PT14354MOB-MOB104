@@ -76,10 +76,10 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
                 if(username.length() < 5){
-                    ed_username.setError("Username phải lớn hơn 5");
+                    ed_username.setError("phải lớn hơn 5");
                 }
                 if(password.length() < 5){
-                    ed_password.setError("Username phải lớn hơn 5");
+                    ed_password.setError("phải lớn hơn 5");
                 }
 
                 
