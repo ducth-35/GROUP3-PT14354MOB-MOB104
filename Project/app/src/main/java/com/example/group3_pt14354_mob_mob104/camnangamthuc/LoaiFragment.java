@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.example.group3_pt14354_mob_mob104.R;
 
+
 public class LoaiFragment extends Fragment {
 
 }
