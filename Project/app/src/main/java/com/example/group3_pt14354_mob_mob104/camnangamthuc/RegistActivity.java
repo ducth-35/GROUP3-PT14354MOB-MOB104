@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
 
 public class RegistActivity extends AppCompatActivity {
     private static final Pattern PASSWORD_PATTERN =
-            Pattern.compile("^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\\d]){1,})(?=(.*[\\W]){1,})(?!.*\\s).{8,}$"
+            Pattern.compile("^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\\d]){1,})(?=(.*[\\W]){1,})(?!.*\\s).{6,}$"
             );
 
     private EditText ed_username,ed_password,ed_repassword;
