@@ -69,7 +69,7 @@ public class RegistActivity extends AppCompatActivity {
                 String password = ed_password.getText().toString().trim();
                 String repassword = ed_repassword.getText().toString().trim();
                 if (TextUtils.isEmpty(username)){
-                    ed_username.setError("ko de trong");
+                    ed_username.setError("Không để trống vùng nhập");
                     return;
                 }
                 else if (username.length() < 5){
@@ -82,7 +82,7 @@ public class RegistActivity extends AppCompatActivity {
                 }
 
                 else if (TextUtils.isEmpty(password)){
-                    ed_password.setError("ko de trong");
+                    ed_password.setError("Không để trống vùng nhập");
                     return;
                 }
                 else if (password.length() < 5){

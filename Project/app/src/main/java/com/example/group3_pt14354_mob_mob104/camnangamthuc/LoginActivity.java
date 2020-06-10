@@ -24,7 +24,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText ed_username, ed_password;
     private Button btn_login, btn_Register;
     private TextView tvtieude,tvusername,tvpass,tv_register;
-    private CheckBox cb_changepassword;
     private FirebaseAuth firebaseAuth;
 
 
@@ -35,7 +34,6 @@ public class LoginActivity extends AppCompatActivity {
         setTitle("Đăng nhập");
         ed_username = findViewById(R.id.edUserName);
         ed_password = findViewById(R.id.edPassword);
-        cb_changepassword = findViewById(R.id.checkBox);
         tvtieude = findViewById(R.id.textView);
         tvusername = findViewById(R.id.textView3);
         tvpass = findViewById(R.id.textView4);
@@ -70,11 +68,11 @@ public class LoginActivity extends AppCompatActivity {
                 String username = ed_username.getText().toString().trim();
                 String password = ed_password.getText().toString().trim();
                 if (TextUtils.isEmpty(username)){
-                    ed_username.setError("User không được để trống");
+                    ed_username.setError("Không để trống vùng nhập");
                     return;
                 }
                 if (TextUtils.isEmpty(password)){
-                    ed_password.setError("Password không được để trống");
+                    ed_password.setError("Không để trống vùng nhập");
                     return;
                 }
                 if(username.length() < 5){
