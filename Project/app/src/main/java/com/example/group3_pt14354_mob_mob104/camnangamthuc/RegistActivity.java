@@ -77,7 +77,7 @@ public class RegistActivity extends AppCompatActivity {
                     return;
                 }
                 else if (!Patterns.EMAIL_ADDRESS.matcher(username).matches()) {
-                    ed_username.setError("Vui long nhap dung dinh dang Email");
+                    ed_username.setError("Mời nhập đúng định dạng email: abcxzy@gmail.com");
                     return;
                 }
 
