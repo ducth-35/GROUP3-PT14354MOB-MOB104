@@ -1,12 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingRight="10dp"
     android:paddingLeft="10dp"
-    tools:context="company.luongchung.camnangamthuc.company.huynhduc.camnangamthuc.NoiBatFragment">
+    tools:context=".camnangamthuc.NoiBatFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <com.baoyz.widget.PullRefreshLayout
         android:id="@+id/swipeRefreshLayoutNoiBat"
         android:layout_width="match_parent"
@@ -21,7 +21,5 @@
             android:layout_height="match_parent"
             android:id="@+id/lvNoiBat" />
     </com.baoyz.widget.PullRefreshLayout>
-
-
 
 </FrameLayout>
