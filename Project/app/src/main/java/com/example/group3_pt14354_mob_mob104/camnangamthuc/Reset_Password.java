@@ -53,7 +53,7 @@ public class Reset_Password extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(),"Chúng tôi đã gửi gmail đổi mật khẩu vào gmail của bạn",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Đổi mật khẩu trong email;",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(Reset_Password.this,LoginActivity.class));
                             return;
                         } else {
