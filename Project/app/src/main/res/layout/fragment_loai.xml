@@ -5,6 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".camnangamthuc.LoaiFragment">
 
-
+    <ListView
+        android:layout_marginTop="105dp"
+        android:background="@drawable/anh_nen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lvLoaiMonAn" />
 
 </FrameLayout>

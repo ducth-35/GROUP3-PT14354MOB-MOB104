@@ -6,10 +6,16 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".camnangamthuc.MainActivity">
+    tools:context="camnangamthuc.MainActivity">
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary">
+
+        <include
+            layout="@layout/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <android.support.design.widget.TabLayout
             android:layout_width="match_parent"
@@ -33,7 +39,7 @@
         android:layout_gravity="bottom"
         app:itemTextColor="#ffff"
         app:itemIconTint="#ffff"
-        android:background="#663399"
+        android:background="@color/colorPrimary"
         android:layout_alignParentBottom="true"
         app:menu="@menu/navigation_botton"/>
 </RelativeLayout>
