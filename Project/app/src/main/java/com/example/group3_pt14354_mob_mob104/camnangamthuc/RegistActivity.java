@@ -44,7 +44,7 @@ public class RegistActivity extends AppCompatActivity {
         tv_repassword = findViewById(R.id.tvregist4);
         btn_register = findViewById(R.id.btnRegister);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "Arial.ttf");
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Arial.ttf");
         ed_username.setTypeface(typeface);
         ed_password.setTypeface(typeface);
         ed_repassword.setTypeface(typeface);

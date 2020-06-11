@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "Arial.ttf");
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Arial.ttf");
         ed_username.setTypeface(typeface);
         ed_password.setTypeface(typeface);
         tvtieude.setTypeface(typeface);
