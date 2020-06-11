@@ -42,8 +42,7 @@ public class Reset_Password extends AppCompatActivity {
         tv_4.setTypeface(typeface);
         tv_5.setTypeface(typeface);
         btn_reset_password.setTypeface(typeface);
-
-
+        
         firebaseAuth = FirebaseAuth.getInstance();
         btn_reset_password.setOnClickListener(new View.OnClickListener() {
             @Override
