@@ -42,17 +42,21 @@ public class Reset_Password extends AppCompatActivity {
         tv_4.setTypeface(typeface);
         tv_5.setTypeface(typeface);
         btn_reset_password.setTypeface(typeface);
-        
+
         firebaseAuth = FirebaseAuth.getInstance();
         btn_reset_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email = ed_email.getText().toString().trim();
+                if (email.isEmpty()){
+                    Toast.makeText(Reset_Password.this,"Mời nhập Username",Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(),"Đổi mật khẩu trong email;",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Đổi mật khẩu trong email",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(Reset_Password.this,LoginActivity.class));
                             return;
                         } else {
