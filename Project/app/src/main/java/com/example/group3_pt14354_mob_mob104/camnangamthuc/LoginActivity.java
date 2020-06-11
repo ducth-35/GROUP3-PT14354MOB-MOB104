@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
     private EditText ed_username, ed_password;
     private Button btn_login, btn_Register;
-    private TextView tvtieude,tvusername,tvpass,tv_register;
+    private TextView tvtieude,tvusername,tvpass,tv_register,tvchangePassword;
     private FirebaseAuth firebaseAuth;
 
 
@@ -39,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         tvpass = findViewById(R.id.textView4);
         tv_register = findViewById(R.id.tv_regist);
         btn_Register = findViewById(R.id.btnRegister);
+        tvchangePassword = findViewById(R.id.tvchangePassword);
 
 
 
@@ -58,7 +59,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this,RegistActivity.class));
-                finish();
+            }
+        });
+        tvchangePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,Reset_Password.class));
             }
         });
 
@@ -71,14 +77,11 @@ public class LoginActivity extends AppCompatActivity {
                     ed_username.setError("Không để trống vùng nhập");
                     return;
                 }
-                if (TextUtils.isEmpty(password)){
+                else if (TextUtils.isEmpty(password)){
                     ed_password.setError("Không để trống vùng nhập");
                     return;
                 }
-                if(username.length() < 5){
-                    ed_username.setError("phải lớn hơn 5");
-                }
-                if(password.length() < 5){
+                else if(password.length() < 5){
                     ed_password.setError("phải lớn hơn 5");
                 }
 
@@ -93,6 +96,7 @@ public class LoginActivity extends AppCompatActivity {
                         else {
                             Toast.makeText(LoginActivity.this,"Sai tên tài khoản hoặc mật khẩu",Toast.LENGTH_SHORT).show();
                             ed_password.setText("");
+                            ed_username.setText("");
                         }
                     }
                 });
