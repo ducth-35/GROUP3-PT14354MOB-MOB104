@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences sharedPreferences = getSharedPreferences(TrangThaiKhoiDong, MODE_PRIVATE);
             Boolean kt = sharedPreferences.getBoolean("SQLite", true);
             if (kt) {
-//                GhiVaoCSDL();
+                GhiVaoCSDL();
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putBoolean("SQLite", false);
                 editor.commit();
