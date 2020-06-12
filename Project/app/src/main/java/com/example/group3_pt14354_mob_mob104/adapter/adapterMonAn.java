@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.group3_pt14354_mob_mob104.R;
 import com.example.group3_pt14354_mob_mob104.model.MonAn;
+import com.squareup.picasso.Picasso;
 
 import java.time.Instant;
 import java.util.List;
@@ -40,7 +41,7 @@ public class adapterMonAn extends ArrayAdapter<MonAn> {
         txtTenMon.setText(monAn.getTxtTenMon());
         txtTitle.setText(monAn.getTitle());
         String URL = monAn.getLinkImg();
-//        Picasso.with(context).load(URL).into(ivIcon);
+        Picasso.with(context).load(URL).into(ivIcon);
         row.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
